@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
-import css from './css/Content.module.css';
-import {savedPosts} from '../posts.json';
-import PostItem from './PostItem';
-import Loader from './Loader';
+import React, {useState, useEffect} from "react";
+import css from "./css/Content.module.css";
+import {savedPosts} from "../posts.json";
+import PostItem from "./PostItem";
+import Loader from "./Loader";
 
 function ContentHooks() {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -29,10 +29,10 @@ function ContentHooks() {
             <div className={css.TitleBar}>
                 <h1>My Photos</h1>
                 <form>
-                    <label htmlFor='searchinput'>Search</label>
+                    <label htmlFor="searchinput">Search</label>
                     <input 
-                    type='search' 
-                    id='searchinput' 
+                    type="search" 
+                    id="searchinput" 
                     onChange={(e)=>{handleChange(e)}}
                     />
                     <h4>Posts Found: {fetchedPosts.length}</h4>
